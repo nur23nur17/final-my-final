@@ -1,0 +1,59 @@
+body {
+    background-image: url('');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000 
+}
+
+.navbar-brand {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+}
+.navbar-nav {
+    margin: 0 auto; 
+}
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+}
+
+.plan {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.plan h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.plan .price {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.plan ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.plan ul li {
+    margin-bottom: 10px;
+}
+
+.plan button {
+    padding: 10px 20px;
+    background-color: #cd1212;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan button:hover {
+    background-color: #ce210e;
+}

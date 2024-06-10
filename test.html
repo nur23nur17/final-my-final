@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Korean Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+    background-image: url('-8.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #010101;
+}
+
+.navbar-brand {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+}
+.navbar-nav {
+        margin: 0 auto; 
+    }
+
+ .container {
+     margin-top: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">Edu-Kor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="edukor.html" id="nav-home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="test.html" id="nav-test">Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lessons.html" id="nav-course">Course</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resouces.html" id="nav-resources">Resources</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="setLanguage('en')">Eng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="setLanguage('ru')">Рус</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center" id="test-title">CHECK YOUR LEVEL</h1>
+        <div id="quiz">
+        </div>
+        <button class="btn btn-primary" onclick="submitQuiz()">Отправить</button>
+        <div id="result" class="alert alert-info result"></div>
+    </div>
+
+    <script>
+        let currentLanguage = 'en';
+
+        const questions = [
+            {
+                question: {
+                    en: "Which of the following combinations is the correct writing of the Korean letter 'ㄱ' (giyeok)?",
+                    ru: "Какое из следующих сочетаний является корректным написанием корейской буквы 'ㄱ' (гиёк)?"
+                },
+                options: {
+                    en: ["ㅂ", "ㅈ", "ㄱ", "ㅁ"],
+                    ru: ["ㅂ", "ㅈ", "ㄱ", "ㅁ"]
+                },
+                answer: "ㄱ"
+            },
+            {
+                question: {
+                    en: "How do you say 'Hello' in Korean?",
+                    ru: "Как будет 'Здравствуйте' на корейском языке?"
+                },
+                options: {
+                    en: ["감사합니다 (Kamsahamnida)", "안녕하세요 (Annyeonghaseyo)", "죄송합니다 (Joesonghamnida)", "잘 지내세요 (Jal jinaeseyo)"],
+                    ru: ["감사합니다 (Kamsahamnida)", "안녕하세요 (Annyeonghaseyo)", "죄송합니다 (Joesonghamnida)", "잘 지내세요 (Jal jinaeseyo)"]
+                },
+                answer: "안녕하세요 (Annyeonghaseyo)"
+            },
+            {
+                question: {
+                    en: "How do you correctly say 'I am a student' in Korean?",
+                    ru: "Как правильно сказать 'Я студент' на корейском языке?"
+                },
+                options: {
+                    en: ["나는 학생이에요 (Naneun haksaeng-ieyo)", "나는 선생님이에요 (Naneun seonsaengnim-ieyo)", "나는 의사이에요 (Naneun uisa-ieyo)", "나는 경찰이에요 (Naneun gyeongchal-ieyo)"],
+                    ru: ["나는 학생이에요 (Naneun haksaeng-ieyo)", "나는 선생님이에요 (Naneun seonsaengnim-ieyo)", "나는 의사이에요 (Naneun uisa-ieyo)", "나는 경찰이에요 (Naneun gyeongchal-ieyo)"]
+                },
+                answer: "나는 학생이에요 (Naneun haksaeng-ieyo)"
+            },
+            {
+                question: {
+                    en: "How do you say 'five' in Korean?",
+                    ru: "Как будет 'пять' на корейском языке?"
+                },
+                options: {
+                    en: ["둘 (dul)", "셋 (set)", "다섯 (daseot)", "넷 (net)"],
+                    ru: ["둘 (dul)", "셋 (set)", "다섯 (daseot)", "넷 (net)"]
+                },
+                answer: "다섯 (daseot)"
+            },
+            {
+                question: {
+                    en: "How do you say 'It is eight o'clock now' in Korean?",
+                    ru: "Как сказать 'Сейчас восемь часов' на корейском языке?"
+                },
+                options: {
+                    en: ["지금 일곱 시예요 (Jigeum ilgop siyaeyo)", "지금 여덟 시예요 (Jigeum yeodeolb siyaeyo)", "지금 아홉 시예요 (Jigeum ahop siyaeyo)", "지금 열 시예요 (Jigeum yeol siyaeyo)"],
+                    ru: ["지금 일곱 시예요 (Jigeum ilgop siyaeyo)", "지금 여덟 시예요 (Jigeum yeodeolb siyaeyo)", "지금 아홉 시예요 (Jigeum ahop siyaeyo)", "지금 열 시예요 (Jigeum yeol siyaeyo)"]
+                },
+                answer: "지금 여덟 시예요 (Jigeum yeodeolb siyaeyo)"
+            },
+            {
+                question: {
+                    en: "How do you say 'rice' in Korean?",
+                    ru: "Как будет 'рис' на корейском языке?"
+                },
+                options: {
+                    en: ["김치 (Kimchi)", "불고기 (Bulgogi)", "밥 (Bap)", "라면 (Ramyun)"],
+                    ru: ["김치 (Kimchi)", "불고기 (Bulgogi)", "밥 (Bap)", "라면 (Ramyun)"]
+                },
+                answer: "밥 (Bap)"
+            },
+            {
+                question: {
+                    en: "How do you say 'hotel' in Korean?",
+                    ru: "Как сказать 'гостиница' на корейском языке?"
+                },
+                options: {
+                    en: ["학교 (Hakgyo)", "병원 (Byeongwon)", "호텔 (Hotel)", "시장 (Sijang)"],
+                    ru: ["학교 (Hakgyo)", "병원 (Byeongwon)", "호텔 (Hotel)", "시장 (Sijang)"]
+                },
+                answer: "호텔 (Hotel)"
+            },
+            {
+                question: {
+                    en: "What is the name of traditional Korean clothing?",
+                    ru: "Как называется традиционная корейская одежда?"
+                },
+                options: {
+                    en: ["한복 (Hanbok)", "기모노 (Kimono)", "사리 (Sari)", "첼로 (Cello)"],
+                    ru: ["한복 (Hanbok)", "기모노 (Kimono)", "사리 (Sari)", "첼로 (Cello)"]
+                },
+                answer: "한복 (Hanbok)"
+            },
+            {
+                question: {
+                    en: "How do you say 'Thank you' in Korean?",
+                    ru: "Как сказать 'Спасибо' на корейском языке?"
+                },
+                options: {
+                    en: ["미안합니다 (Mianhamnida)", "안녕하세요 (Annyeonghaseyo)", "감사합니다 (Kamsahamnida)", "잘가요 (Jalgayo)"],
+                    ru: ["미안합니다 (Mianhamnida)", "안녕하세요 (Annyeonghaseyo)", "감사합니다 (Kamsahamnida)", "잘가요 (Jalgayo)"]
+                },
+                answer: "감사합니다 (Kamsahamnida)"
+            },
+            {
+                question: {
+                    en: "How do you say 'Goodbye' in Korean?",
+                    ru: "Как будет 'До свидания' на корейском языке?"
+                },
+                options: {
+                    en: ["안녕히 계세요 (Annyeonghi gyeseyo)", "안녕히 주무세요 (Annyeonghi jumuseyo)", "감사합니다 (Kamsahamnida)", "죄송합니다 (Joesonghamnida)"],
+                    ru: ["안녕히 계세요 (Annyeonghi gyeseyo)", "안녕히 주무세요 (Annyeonghi jumuseyo)", "감사합니다 (Kamsahamnida)", "죄송합니다 (Joesonghamnida)"]
+                },
+                answer: "안녕히 계세요 (Annyeonghi gyeseyo)"
+            }
+        ];
+
+        const setLanguage = (lang) => {
+            currentLanguage = lang;
+            document.getElementById('test-title').innerText = lang === 'en' ? 'СHECK YOUR LEVEL' : 'УЗНАЙ СВОЙ УРОВЕНЬ';
+            renderQuiz();
+        };
+
+        const renderQuiz = () => {
+            const quizContainer = document.getElementById('quiz');
+            quizContainer.innerHTML = '';
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                const questionText = document.createElement('p');
+                questionText.innerText = q.question[currentLanguage];
+                questionDiv.appendChild(questionText);
+                q.options[currentLanguage].forEach(option => {
+                    const optionLabel = document.createElement('label');
+                    optionLabel.className = 'd-block';
+                    const optionInput = document.createElement('input');
+                    optionInput.type = 'radio';
+                    optionInput.name = 'question' + index;
+                    optionInput.value = option;
+                    optionLabel.appendChild(optionInput);
+                    optionLabel.appendChild(document.createTextNode(option));
+                    questionDiv.appendChild(optionLabel);
+                });
+                quizContainer.appendChild(questionDiv);
+            });
+        };
+
+        const submitQuiz = () => {
+            let score = 0;
+            questions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                if (selectedOption && selectedOption.value === q.answer) {
+                    score++;
+                }
+            });
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerText = currentLanguage === 'en' ? `Your score is ${score} out of ${questions.length}` : `Ваш результат ${score} из ${questions.length}`;
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderQuiz();
+        });
+    </script>
+    <footer class="footer bg-light mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted" id="footer-text">© 2024 Online Korean Course <br>
+                Contact US:<br>
+                8(777)8988706<br>
+                Astana, Kazakhstan<br>
+                Office street:<br>
+                Avenue Mangilik-El C1
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

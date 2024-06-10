@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Korean Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+    background-image: url('-8.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000000;
+}
+
+.navbar-brand {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+}
+.navbar-nav {
+        margin: 0 auto; 
+    }
+</style>
+<script>
+    function setLanguage(lang) {
+        var elements = document.querySelectorAll('[data-lang]');
+        for (var i = 0; i < elements.length; i++) {
+            var text = elements[i].getAttribute('data-lang');
+            if (lang === 'ru') {
+                elements[i].innerText = text;
+            } else if (lang === 'en') {
+                elements[i].innerText = text.replace("Рус", "Eng");
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">Edu-Kor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="edukor.html" id="nav-home" data-lang="Главная">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about" data-lang="О нас">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="test.html" id="nav-test" data-lang="Тест">Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lessons.html" id="nav-course" data-lang="Курс">Course</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resouces.html" id="nav-resources" data-lang="Ресурсы">Resources</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="setLanguage('en')" data-lang="Eng">Eng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="setLanguage('ru')" data-lang="Рус">Рус</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<h2 align="center" data-lang="Книги уровня A"><b>A level books</b></h2>
+    <a href="korea_grammatik.pdf" target="_blank" data-lang="Грамматика корейского языка для начинающих">Beginner Level Grammar Korea</a><br>
+    <a href="grammaticheskiy_ocherk_koreyskogo_mazur.pdf" target="_blank" data-lang="Грамматика корейского языка для начинающих">Beginner Grammar Korea</a><br>
+    <a href="Peter_Constantine_-_Making_out_in_Korean_-_2003.pdf" target="_blank" data-lang="Флирт в Корее">Making out in Korea</a>
+    <h2 align="center" data-lang="Книги уровня B"><b>В level books</b></h2>
+    <a href="korea_grammatik.pdf" target="_blank" data-lang="Грамматика корейского языка для среднего уровня">Intermediate Level Grammar Korea</a><br>
+    <a href="Yonsei_Korean_3-1.pdf" target="_blank" data-lang="Грамматика корейского языка для среднего уровня">Intermediate Grammar Korea</a><br>
+    <a href="Peter_Constantine_-_Making_out_in_Korean_-_2003.pdf" target="_blank" data-lang="Флирт в Корее">Making out in Korea</a>
+    <h2 align="center" data-lang="Книги уровня C"><b>C level books</b></h2>
+    <a href="korea_grammatik.pdf" target="_blank" data-lang="Грамматика корейского языка для продвинутого уровня">High Level Grammar Korea</a><br>
+    <a href="Yonsei_Korean_3-1.pdf" target="_blank" data-lang="Грамматика корейского языка для продвинутого уровня">High level Grammar Korea</a><br>
+    <a href="Peter_Constantine_-_Making_out_in_Korean_-_2003.pdf" target="_blank" data-lang="Флирт в Корее">Making out in Korea</a>
+    <p>&#160;</p>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="mouse..jpg" class="img-fluid" alt="Description of image 1">
+            </div>
+            <div class="col-md-4">
+                <img src="QUEEN OF TEARS.jpg" class="img-fluid" alt="Description of image 2">
+            </div>
+            <div class="col-md-4">
+                <img src="Business Proposal.jpg" class="img-fluid" alt="Description of image 3">
+            </div>
+            <div class="col-md-4">
+                <img src="Wonderful World .jpg" class="img-fluid" alt="Description of image 3">
+            </div>
+            <div class="col-md-4">
+                <img src="family..jpg" class="img-fluid" alt="Description of image 3">
+            </div>
+            <div class="col-md-4">
+                <img src="Penthouse.jpg" class="img-fluid" alt="Description of image 3">
+            </div>
+            <div class="col-md-4">
+                <img src="Lighter and Princess.jpg" class="img-fluid" alt="Description of image 3">
+            </div>
+        </div>
+    </div>
+    <p>&#160;</p>
+    <footer class="footer bg-light mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted" id="footer-text">© 2024 Online Korean Course <br>
+                Contact US:<br>
+                8(777)8988706<br>
+                Astana, Kazakhstan<br>
+                Office street:<br>
+                Avenue Mangilik-El C1<br>
+                Instagram:edu_korkz
+
+            </span>
+        </div>
+    </footer>
+
+</body>
+</html>

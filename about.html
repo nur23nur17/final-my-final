@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Korean Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #000 #f7f7f7;
+        }
+        .navbar-brand {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.5rem;
+        }
+        .navbar-nav {
+            margin: 0 auto; 
+        }
+        .content-block {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .carousel-item {
+            height: 500px;
+        }
+        .carousel-item img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-en="Edu-Kor" data-ru="Эду-Кор">Edu-Kor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="edukor.html" id="nav-home" data-en="Home" data-ru="Домой">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about" data-en="About Us" data-ru="О нас">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="test.html" id="nav-test" data-en="Test" data-ru="Тест">Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lessons.html" id="nav-course" data-en="Course" data-ru="Курс">Course</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resouces.html" id="nav-resources" data-en="Resources" data-ru="Ресурсы">Resources</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="setLanguage('en')">Eng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="setLanguage('ru')">Рус</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="content-block">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 data-en="Seoul National University" data-ru="Сеульский национальный университет">Seoul National University</h2>
+                    <p data-en="Through our courses, you have the opportunity to receive quality education and training that opens the doors to the world’s leading universities, including Seoul National University. Our courses not only provide students with knowledge of language and culture, but also help to develop skills of communication, adaptation to a new environment and independence." data-ru="Через наши курсы у вас есть возможность получить качественное образование и обучение, которое открывает двери в ведущие университеты мира, включая Сеульский национальный университет. Наши курсы не только предоставляют студентам знания языка и культуры, но и помогают развивать навыки общения, адаптации к новой среде и самостоятельности.">Through our courses, you have the opportunity to receive quality education and training that opens the doors to the world’s leading universities, including Seoul National University. Our courses not only provide students with knowledge of language and culture, but also help to develop skills of communication, adaptation to a new environment and independence.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="seoul.jpg" alt="Description of Image" width="540" height="400">
+                </div>
+                <div class="col-md-6">
+                    <img src="KAIST.jpg" alt="Description of Image" width="550" height="400">
+                </div>
+                <div class="col-md-6">
+                    <h2 data-en="KAIST University" data-ru="Университет KAIST">KAIST University</h2>
+                    <p data-en="Our courses are a chance to become part of the best universities in the world, such as KAIST (Korean Institute of Science and Technology) and now 300 graduates of our course have entered one of the top universities of Korea-KAIST (Korean Institute of Science and Technology)" data-ru="Наши курсы - это шанс стать частью лучших университетов мира, таких как KAIST (Корейский институт науки и технологий), и теперь 300 выпускников нашего курса поступили в один из лучших университетов Кореи - KAIST (Корейский институт науки и технологий).">Our courses are a chance to become part of the best universities in the world, such as KAIST (Korean Institute of Science and Technology) and now 300 graduates of our course have entered one of the top universities of Korea-KAIST (Korean Institute of Science and Technology)</p>
+                </div>
+                <div class="col-md-6">
+                    <h2 data-en="YONSEI University" data-ru="Университет YONSEI">YONSEI University</h2>
+                    <p data-en="Thanks to our intensive courses, YONSEI University has become one of the most popular universities among our students." data-ru="Благодаря нашим интенсивным курсам, университет YONSEI стал одним из самых популярных университетов среди наших студентов.">Thanks to our intensive courses, YONSEI University has become one of the most popular universities among our students.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="Yonsel.jpg" alt="Description of Image" width="530" height="400">
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>&#160;</p>
+    <h1 align="center" data-en="Results of students" data-ru="Результаты студентов">Results of students</h1>
+    <div class="container mt-5 d-flex justify-content-center">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 80%;">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="anel.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="nuray.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="course.jpg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <p>&#160;</p>
+    <h1 align ="center" data-en="TEAM" data-ru="КОМАНДА"><b>TEAM</b></h1>
+    <div class="container mt-5">
+        <h1 class="text-center" data-en="Our Team" data-ru="Наша команда">Our Team</h1>
+        <div class="row">
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Yelena Semenova" data-ru="Елена Семенова">Yelena Semenova</h5>
+                        <p class="card-text" data-en="Position: manager" data-ru="Должность: менеджер">Position: manager</p>
+                        <p class="card-text" data-en="Description: responsible for students and clients" data-ru="Описание: отвечает за студентов и клиентов">Description: responsible for students and clients</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Nuray Orynbassar" data-ru="Нурай Орынбасар">Nuray Orynbassar</h5>
+                        <p class="card-text" data-en="Position: SMM content maker" data-ru="Должность: SMM контент-мейкер">Position: SMM content maker</p>
+                        <p class="card-text" data-en="Description: responsible for the quality and maintaining to social media" data-ru="Описание: отвечает за качество и ведение социальных сетей">Description: responsible for the quality and maintaining to social media</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Anastasia Sergeevna" data-ru="Анастасия Сергеевна">Anastasia Sergeevna</h5>
+                        <p class="card-text" data-en="Position: Teacher of beginner level" data-ru="Должность: Учитель начального уровня">Position: Teacher of beginner level</p>
+                        <p class="card-text" data-en="Description: The best teacher with the highest level. 6 years of work experience. Teacher of beginner level." data-ru="Описание: Лучший учитель с высшим уровнем. 6 лет опыта работы. Учитель начального уровня.">Description: The best teacher with the highest level. 6 years of work experience. Teacher of beginner level.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Alina Min" data-ru="Алина Мин">Alina Min</h5>
+                        <p class="card-text" data-en="Position: Teacher of intermediate level" data-ru="Должность: Учитель среднего уровня">Position: Teacher of intermediate level</p>
+                        <p class="card-text" data-en="Description: The best teacher with the highest level, graduate of Yonsei University. 7 years of work experience. Teacher of intermediate level." data-ru="Описание: Лучший учитель с высшим уровнем, выпускница университета Ёнсе. 7 лет опыта работы. Учитель среднего уровня.">Description: The best teacher with the highest level, graduate of Yonsei University. 7 years of work experience. Teacher of intermediate level.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Aigerym Batyrkhanova" data-ru="Айгерим Батыркханова">Aigerym Batyrkhanova</h5>
+                        <p class="card-text" data-en="Position: Teacher of high level" data-ru="Должность: Учитель высшего уровня">Position: Teacher of high level</p>
+                        <p class="card-text" data-en="Description: The best teacher with the highest level, graduate of Seoul National University. 9 years of work experience. Teacher of high level." data-ru="Описание: Лучший учитель с высшим уровнем, выпускница Сеульского национального университета. 9 лет опыта работы. Учитель высшего уровня.">Description: The best teacher with the highest level, graduate of Seoul National University. 9 years of work experience. Teacher of high level.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Darya Simakhina" data-ru="Дарья Симакина">Darya Simakhina</h5>
+                        <p class="card-text" data-en="Position: Supervisor of beginner level" data-ru="Должность: Супервайзер начального уровня">Position: Supervisor of beginner level</p>
+                        <p class="card-text" data-en="Description: The favorite of students. The pretty and smart member in our team. More responsible to own job." data-ru="Описание: Любимица студентов. Красивая и умная член команды. Более ответственна в своей работе.">Description: The favorite of students. The pretty and smart member in our team. More responsible to own job.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Anel Alibek" data-ru="Анэль Алибек">Anel Alibek</h5>
+                        <p class="card-text" data-en="Position: Supervisor of intermediate level" data-ru="Должность: Супервайзер среднего уровня">Position: Supervisor of intermediate level</p>
+                        <p class="card-text" data-en="Description: The best and smart, calm member in our team. The favorite supervisor." data-ru="Описание: Лучшая и умная, спокойная член команды. Любимый супервайзер.">Description: The best and smart, calm member in our team. The favorite supervisor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 team-member">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" data-en="Zarina Alikhanova" data-ru="Зарина Алиханова">Zarina Alikhanova</h5>
+                        <p class="card-text" data-en="Position: Supervisor of high level" data-ru="Должность: Супервайзер высшего уровня">Position: Supervisor of high level</p>
+                        <p class="card-text" data-en="Description: Active and smart, best supervisor for high level students. The favorite supervisor for students." data-ru="Описание: Активная и умная, лучший супервайзер для студентов высшего уровня. Любимый супервайзер для студентов.">Description: Active and smart, best supervisor for high level students. The favorite supervisor for students.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>&#160;</p>
+    <footer class="footer bg-light mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted" id="footer-text">© 2024 Online Korean Course <br>
+                Contact US:<br>
+                8(777)8988706<br>
+                Astana, Kazakhstan<br>
+                Office street:<br>
+                Avenue Mangilik-El C1<br>
+                Instagram:edu_korkz
+
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-${lang}`);
+            });
+        }
+    </script>
+</body>
+</html>
